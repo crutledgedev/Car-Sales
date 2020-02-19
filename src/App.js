@@ -6,7 +6,8 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { connect } from 'react-redux';
 
-const App = (props) => {
+const App = (props) => { //accessing state through props instead of local component state
+
 
   // const removeFeature = item => {
   //   // dispatch an action here to remove an item
@@ -30,7 +31,7 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = state => { //mapsStateToProps is a function that takes in state and returns only the state we ask for
   return {
     additionalFeatures: state.additionalFeatures,
     additionalPrice: state.additionalPrice,
@@ -38,5 +39,5 @@ const mapStateToProps = state => {
   }
 }
 
-
+//connect  connects App.js to store (wrap app in provider passing store as props on index.js) so that it can connect to state
 export default connect(mapStateToProps, {})(App);

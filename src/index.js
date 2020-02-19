@@ -10,7 +10,7 @@ import { featureReducer } from './reducers/index';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-const store= createStore(featureReducer);
+const store= createStore(featureReducer); //createStore pass store as props through Provider. Wrapp App in provider like you would router. 
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
