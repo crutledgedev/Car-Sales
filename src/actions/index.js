@@ -16,7 +16,7 @@ export const add = (delivery) => {
     return { type: ADD_FEATURE, payload: delivery }
 }
 
-//this 'thing', in this assignment, it is the FEATURE that we're trying to add in Car Sales, it is an object containing features information of the car
+//this 'delivery', in this assignment, it is the FEATURE that we're trying to add in Car Sales, it is an object containing features information of the car
 
 export const remove = (delivery) => {
     return { type: REMOVE_FEATURE, payload: delivery }
